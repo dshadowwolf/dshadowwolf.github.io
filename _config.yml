@@ -2,3 +2,5 @@ remote_theme: PandaSekh/Jekyll-YAMT
 title: Welcome to Wolf's Cooking!
 description: A simple online cook book containing good food
 include: [ recipes ]
+
+theme: jekyll-theme-hacker
