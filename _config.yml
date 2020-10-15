@@ -1,6 +1,7 @@
 theme: jekyll-theme-hacker
 title: Welcome to Wolfs Cookbook
 description: Food for Geeks, by Geeks
+show_downloads: false
 include: [ recipes ]
 
 github:
