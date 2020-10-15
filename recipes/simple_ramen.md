@@ -41,7 +41,7 @@ Ramen is a classic Japanese dish. This is an attempt to replicate it.
 	
 ### Instructions
 #### Marinade
-____Make This a Day Ahead of Time___
+___Make This a Day Ahead of Time___
 1. Mix liquid ingredients
 2. Whisk in vegetables and spices
 3. Cover and chill in refrigerator for 12 to 24 hours
