@@ -22,11 +22,4 @@ Here you can find the recipes that are loved and used regularly by [@dshadowwolf
 - [Classic Waffles](recipes/waffles.md)
   - Another classic recipe
   - _Requires_: Waffle Iron
-- [Garden Salsa](recipes/silvers_salsa.md)
-  - A take on a classic
-  - _Requires_: Food Processor or Blender
-   
-4. Sauces and Toppings
-- [Guacamole](recipes/silvers_guac.md)
-  - From the same mind as the Garden Salsa
   	  
