@@ -37,7 +37,7 @@ While that does cover the base form of the recipe, it can grow from that base to
   - [ ] 1/4 tsp paprika
   - [ ] 2 tsp salt, divided
 
-Instructions:
+### Instructions
 1. Brown meat, largely drain'
 2. Add red bell pepper, onion, celery and half the salt. Cook while stirring frequently until veggies start to soften. 
 3. Add rice, garlic, chives and dry seasonings - continue to stir until rice begins to toast. 

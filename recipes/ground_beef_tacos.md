@@ -29,7 +29,7 @@ Tacos are a classic Mexican dish that almost anyone is familiar with, what follo
   - [ ] 1/2 cup vegetable or chicken broth
   - [ ] 2 teaspoons balsamic vinegar
 
-### Instructions:
+### Instructions
 1. Sautee onions in your choice of oil (1 tablespoon should be enough) until soft, but have not changed color.
 2. Add garlic and spices (not the brown sugar), mix well. Cook until fragrant - should be 30 seconds to a minute.
 3. Add beef, breaking it up and cooking until "not pink" (ie: done but not "well done") - this should take 5 to 10 minutes.
