@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+section#downloads {
+	display: none !important;
+}
+
 .btn-github {
   display: none !important;
 }
