@@ -1,8 +1,9 @@
+## Dirt Rice (DShadowWolfs Recipe)
 According to [Wikipedia](https://en.wikipedia.org/wiki/Dirty_rice), Dirty Rice is `a traditional Louisiana Creole dish made from white rice which gets a "dirty" color from being cooked with small pieces of pork, beef or chicken, green bell pepper, celery, and onion, and spiced with cayenne and black pepper.`
 
 While that does cover the base form of the recipe, it can grow from that base to something with more complex flavors or custom mixes of spices, as this recipe should demonstrate.
 
-Ingredients:
+### Ingredients
 * Meats
   - [ ] 1 pound ground beef (or 1/2 pound beef 1/2 pound sausage)
 
