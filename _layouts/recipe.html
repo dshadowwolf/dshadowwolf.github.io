@@ -1,0 +1,45 @@
+{% include header.html %}
+        <div class="container">
+            <section id="main_content">
+                <p id="recipe_description">{{ page.description }}</p>
+                <h3>Ingredients</h3>
+                <ul class="ingredients">
+                    {% for section in page.ingredients %}
+                    <li class="ing-section">{{section.section}}
+                        <ul class="ing-section-parts">
+                            {% for ingredient in section.parts %}
+                            <li><span class="ing-amount">{{ingredient.amount}}</span>&nbsp;{{ingredient.name}}
+                                {% if ingredient.notes != '' %}
+                                <ul class="ing-notes">
+                                    {% for note in ingredient.notes %}
+                                    <li>{{note}}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <h3>Instructions</h3>
+                <ol class="instructions">
+                    {% for instruction in page.instructions %}
+                    <li>{{instruction}}</li>
+                    {% endfor %}
+                </ol>
+                {% if page.instruction_notes != '' %}
+                <ul class="instruction-notes">
+                    {% for note in page.instruction_notes %}
+                    <li>{{ note }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if content != '' %}
+                <div class="other-content">
+                    {{ content }}
+                </div>
+                {% endif %}
+            </section>
+{% include footer.html %}
+

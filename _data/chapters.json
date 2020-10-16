@@ -1,0 +1,41 @@
+[
+  {
+    "name": "One Pot Meals",
+    "description": "Meals that can be cooked in a single pot",
+    "recipes": [ 
+      { "name": "\"Curry, American Style\"",
+        "has_notes": "true",
+	"notes": [ "A custom take on the classic Indian dish" ],
+	"link": "recipes/1/curry_dshad.html" },
+      { "name": "Cajun Dirty Rice",
+        "has_notes": "true",
+	"notes": [ "My own version of this classic Cajun dish" ],
+	"link": "recipes/1/dirty_rice_dshad.html" },
+      { "name": "Ground Beef Tacos",
+        "has_notes": "true",
+	"link": "recipes/1/tacos_beef_dshad.html",
+	"notes": [ "A somewhat complex take on a relatively simple classic" ] },
+      { "name": "Sausage Gravy",
+        "has_notes": "true",
+	"link": "recipes/1/sausage_gravy_dshad.html",
+	"notes": [ "Simple, but something people seem to have trouble with" ] } ]
+  },
+  {
+    "name": "Soups and Pasta",
+    "description": "Various soup and pasta recipes",
+    "recipes": [
+      { "name": "Beef Ramen",
+        "has_notes": "true",
+	"notes": [ "A Japanese classic that long ago spread to the rest of the planet" ],
+	"link": "recipes/2/ramen_beef_dshad.html" } ]
+  },
+  {
+    "name": "Special Equipment Needed",
+    "description": "Recipes that need special equipment, such as waffle irons",
+    "recipes": [
+      { "name": "Classic Waffles",
+        "has_notes": "true",
+	"notes": [ "<em>Requires</em>: Waffle Iron" ],
+	"link": "recipes/3/waffles_dshad.html" } ]
+  }	
+]
