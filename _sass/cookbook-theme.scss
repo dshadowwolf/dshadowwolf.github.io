@@ -1,0 +1,606 @@
+@import "default_colors";
+@import "defaults";
+
+$body-background: $cod-grey !default;
+$body-foreground: $gallery !default;
+$header: $conifer !default;
+$blockquote-color: $silver-chalice !default;
+$blockquote-border: $dove-grey !default;
+$container-max-width: 1000px;
+
+@mixin media-max-width($max-width) {
+    @media (max-width: $max-width) {
+        @content;
+          
+    }
+
+}
+
+@keyframes textShadow {
+    0% {
+        text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    5% {
+        text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    10% {
+        text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    15% {
+        text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    20% {
+        text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    25% {
+        text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    30% {
+        text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    35% {
+        text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    40% {
+        text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    45% {
+        text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    50% {
+        text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    55% {
+        text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    60% {
+        text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    65% {
+        text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    70% {
+        text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    75% {
+        text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    80% {
+        text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    85% {
+        text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    90% {
+        text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    95% {
+        text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+    100% {
+        text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+          
+    }
+
+}
+
+@keyframes flicker {
+    $steps:20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            opacity:((random(300)%75)+75)/100;
+        }
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $body-background;
+    color: $body-foreground;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $system-fonts ;
+    animation: flicker 0.1s infinite;
+}
+
+/* General & 'Reset' Stuff */
+
+.container {
+    width: 90%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    animation: textShadow 1.6s infinite;
+    z-index: 1;
+    position:relative;
+    
+    &::after {
+        content:" ";
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:transparentize($body-background,0.9);
+        opacity:0;
+        z-index:2;
+        pointer-events:none;
+    }
+    &::before {
+        content:" ";
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:linear-gradient(transparentize($body-background,1) 50%, transparentize(darken($body-background,10),0.75) 50%), linear-gradient(90deg,transparentize(#ff0000,0.94),transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
+        z-index:2;
+        background-size:100% 2px, 3px 100%;
+        pointer-events:none;
+    }
+}
+
+section {
+    display: block;
+    margin: 0 0 20px 0;
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px;
+
+}
+
+li {
+    line-height: 1.4 ;
+
+}
+
+/* Header, <header>
+   header   - container
+   h1       - project name
+   h2       - project description
+*/
+
+header {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-bottom: 1px dashed $conifer; 
+    padding: 0;
+    padding-top: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    line-height: 1;
+    margin: 0 0 0 -40px;
+    font-weight: bold;
+    font-family: $system-fonts;
+    color: $conifer;//$header;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+                 0 0 5px rgba(181, 232, 83, 0.1),
+                 0 0 10px rgba(181, 232, 83, 0.1);
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+    @include media-max-width($container-max-width) {
+        margin-left: 0;
+    }
+}
+
+
+header h1:before {
+    content: "# ";
+    font-size: 32px;
+
+}
+
+header h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: $silver-chalice;
+    vertical-align: top;
+    line-height: .75;
+}
+
+#downloads .btn {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+
+}
+
+/* Main Content
+ */
+
+#main_content {
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    color: $gallery;
+}
+section img {
+    max-width: 100%
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family: $system-fonts;
+    color: $header;
+    letter-spacing: -0.03em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+                 0 0 5px rgba(181, 232, 83, 0.1),
+                 0 0 10px rgba(181, 232, 83, 0.1);
+
+}
+
+#main_content h1 {
+    font-size: 30px;
+
+}
+
+#main_content h2 {
+    font-size: 24px;
+
+}
+
+#main_content h3 {
+    font-size: 18px;
+
+}
+
+#main_content h4 {
+    font-size: 14px;
+
+}
+
+#main_content h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+
+}
+
+#main_content h6 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0 5px 0;
+
+}
+
+dt {
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul > li::marker {
+    content: "\226b\00a0\00a0";
+    font-size: 16px;
+    color: $conifer;
+}
+
+ol > li > ul li > ul > li::marker {
+    content: "\2937\00a0\00a0";
+    font-size: 16px;
+    color: $conifer;
+}
+
+blockquote {
+    color: $blockquote-color;
+    padding-left: 10px;
+    border-left: 1px dotted $blockquote-border;
+
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    font-size: 16px;
+    color: #b5e853;
+    border-radius: 2px;
+    word-wrap: normal;
+    overflow: auto;
+    overflow-y: hidden;
+
+}
+
+code.highlighter-rouge {
+    background: rgba(0,0,0,0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0px 3px;
+    margin: 0px -3px;
+    color: #aa759f;
+    border-radius: 2px;
+
+}
+
+table {
+    width: 100%;
+    margin: 0 0 20px 0;
+
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px dashed #b5e853;
+    padding: 5px 10px;
+
+}
+
+td {
+    padding: 5px 10px;
+
+}
+
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px dashed #b5e853;
+    color: #b5e853;
+
+}
+
+/* Buttons
+ */
+
+.btn {
+    display: inline-block;
+    background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
+    padding: 8px 18px;
+    border-radius: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+    border-top: 2px solid rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+}
+
+.btn:hover {
+    background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
+
+}
+
+.btn .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 1px 8px 0 0;
+    float: left;
+
+}
+
+.btn-github .icon {
+    opacity: 0.6;
+    background: url("../images/blacktocat.png") 0 0 no-repeat;
+
+}
+
+/* Links
+   a, a:hover, a:visited
+*/
+
+a {
+    color: #63c0f5;
+    text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+
+}
+
+/* Clearfix */
+
+.cf:before, .cf:after {
+    content:"";
+    display:table;
+
+}
+
+.cf:after {
+    clear:both;
+
+}
+
+.cf {
+    zoom:1;
+
+}
+
+#a-title {
+    text-decoration: none;
+    line-height: 1;
+}
+
+#main_content h3 {
+    font-size: 24px;
+    text-decoration: underline;
+    font-variant: small-caps;
+    letter-spacing: .25em;
+}
+
+ol li {
+    font-size: 18px;
+}
+
+ol li > ul li {
+    font-size: 16px;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: $light-amber;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:visited {
+    color: $amber;
+}
+
+#main_content p {
+    font-size: 18px;
+    line-height: 1;
+    font-variant: small-caps;
+}
+
+ul.instruction-notes li {
+    margin-left: 4em;
+    font-size: 1.3em;
+    font-variant: small-caps;
+    line-height: 0.8em;
+}
+
+ol.instructions, ol.instructions li {
+    list-style: decimal inside !important;
+    margin: 0;
+}
+
+ol.instructions li {
+    margin-left: 2em;
+    font-size: 1.3em;
+    line-height: 1em;
+    margin-bottom: 0.33em;
+}
+
+li.ing-section::marker, ul.ing-section-parts > li.ing-section::marker {
+    content: '\2767\00a0';
+    color: $conifer;
+    font-size: 1.4em;
+}
+
+ul.ing-section-parts > li::marker {
+    content: '\204d\00a0\00a0';
+    font-size: 1.4em;
+}
+
+li.ing-section {
+    font-size: 1.3em;
+}
+
+ul.ing-section-parts > li {
+    font-size: .95em;
+    line-height: 0.8em;
+}
+
+ul.ing-notes li {
+    font-size: 0.95em;
+    font-variant: small-caps;
+    line-height: 0.9em !important;
+}
+
+ul.ing-notes li::marker, ul.instruction-notes li::marker {
+    content: '\2023\00a0';
+    font-size: 1.3em;
+    line-height: 0.2em;
+}
+
+footer {
+    font-size: 0.75em;
+    border-top: 1px dotted $conifer;
+    padding: 0;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    width: 100%;
+    margin: 0px auto;
+    align: center;
+    text-align: center;
+}
+
+li.ing-section-outer {
+    font-size: 1.3em;
+}
+
+li.ing-section-outer::marker {
+    content: '\21a3\00a0';
+    color: $conifer;
+    font-size: 1.35em;
+}
+
+.ing-section-parts li.ing-section {
+    font-size: .95em !important;
+}
+
+li.ing-section > ul.ing-section-parts > li {
+    font-size: .95em !important;
+}
+
+.ing-notes {
+    font-size: 1.05em !important;
+    margin-left: -1em;
+}
+
+dt {
+    line-height: 0.75;
+    padding: 0;
+    margin: 0;
+}
+
+dd {
+    font-size: 1.3em;
+    line-height: 0.98;
+    &::before {
+        content: '\22d9\00a0';
+        color: $conifer;
+        font-size: 0.6em;
+        vertical-align: 0.25em;
+    }
+    &::after {
+        content: '\00a0\22d8';
+        color: $conifer;
+        font-size: 0.6em;
+        vertical-align: 0.25em;
+    }
+}
+
+dt > h3 {
+    margin: 0;
+    margin-bottom: 0.25em;
+}
+
+.reduced-margin {
+    margin-left: -2.75em !important;
+}
+
+.less-reduced-margin {
+    margin-left: -1em !important;
+}
+ 
+h3.instructions-section, h3.ingredients-section {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,92 @@
+---
+# ½   ¼   ⅛  ⅓
+layout: default
+title: Beef Ramen
+name: Beef Ramen
+description: "The classic Japanese noodle soup, with nearly every region of the country having its own variation. After World War 2 it started to become a staple of the struggling nation thanks to cheap wheat flour flooding in from the United States. Then, in 1958, the Founder and Chairman of Nissin Foods&mdash;Momofuku Ando (安藤 百福) invented instant Ramen. In the 1980's this food was becoming a Japanese cultural icon and the low price of the Instant variety has seen it become a staple food of cash-strapped college students everywhere.\n\nPresented here is an attempt at a much healthier version of the classic. Do note that this has some preparatory steps that need to be done hours before actually preparing the final dish."
+ingredients: []
+instructions: []
+instruction_notes: []
+ingdt: [ { section: Marinade, ingredients: [ { section: Liquids, parts: [ { amount: ½ cup, name: Soy Sauce, notes: [] }, { amount: 2 tbsp, name: Mirin, notes: [] }, { amount: 1 tbsp, name: Sesame Oil, notes: [] } ] }, { section: Other, parts: [ { amount: 1 tbsp, name: Sugar, notes: [ "Turbinado or other \"unrefined\" sugars are fine" ] }, { amount: 1 tbsp, name: Garlic Powder, notes: [] }, { amount: 1 tsp, name: Fresh Grated Ginger, notes: [] }, { amount: ½ tsp, name: Ground Black Pepper, notes: [] }, { amount: ½ tbsp, name: Chopped Scallions or Chives, notes: [] } ] } ] }, { section: Broth, ingredients: [ { section: "", parts: [ { amount: 6 cups, name: Water, notes: [] }, { amount: 3 tbsp Soy Sauce, notes: [] }, { amount: 1 tsp, name: Dark Soy Sauce, notes: [] }, { amount: 1 tbsp, name: Miso Paste, notes: [ "This can be difficult to find, but is available on Amazon" ] }, { amount: 1 tsp, name: Sesame Oil, notes: [] }, { amount: 1 tbsp, name: Beef Bouillon Powder, notes: [ "or an equivalent amount in the classic cube form" ] } ] } ] }, { section: Soup, ingredients: [ { section: Meats, parts: [ { amount: 1 to 1½ pounds, name: "Skirt Steak or \"asian cut\" beef", notes: [] } ] }, { section: Vegetables, parts: [ { amount: 1 medium, name: White Onion, notes: [ "Dice half, cut the half other into thin strips" ] }, { amount: 1 medium, name: Green Bell Pepper, notes: [ "Dice the entire thing" ] }, { amount: ½ cup, name: Green Onions, notes: [ "You can also use scallions or spring onions" ] }, { amount: ½ cup, name: Carrot, notes: [ "Thin strips or julienned, your choice" ] }, { amount: ¼ cup, name: Chives, notes: [] } ] }, { section: Other, parts: [ { amount: 2 tbsp, name: Sesame Oil, notes: [] }, { amount: 3 to 4 tbsp, name: Thickener, notes: [ "Flour or a vegetable starch, such as Mung Bean or Corn Starch" ] }, { amount: "", name: Noodles, notes: [ "I've use low mein noodles as well as the classic wheat noodle that is so well known from Ramen. Chefs choice!" ] }, { amount: "", name: Marinade, notes: [ "You make this as part of the process" ] } ] } ] } ]
+---
+<p>{{ page.description }}</p>
+<h3 id="ingredients">Ingredients</h3>
+<ul class="ingredients">
+    {% for ts in page.ingdt %}
+    <li class="ing-section-outer" id="{{ts.section}}_ingredients">
+        {{ ts.section }}
+        <ul class="ing-section-parts">
+            {% for section in ts.ingredients %}
+            <li class="ing-section">
+                {{ section.section }}
+                <ul class="ing-section-parts" id="{{ts.section}}_{{section.section}}_ingredients">
+                    {% for ing in section.parts %}
+                    <li><span class="ing-amount">{{ ing.amount }}</span>&nbsp;{{ ing.name }}
+                        {% if ing.notes != '' %}
+                        <ul class="ing-notes">
+                            {% for note in ing.notes %}
+                            <li>{{ note }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+<h3 id="instructions">Instructions</h3>
+<ul style="list-style-type: none; line-height: 1.1em;">
+    <li>
+        <dl>
+            <dt><h3 id="marinade">Marinade</h4></dt>
+            <dd>Make this 12 to 24 hours ahead of time!</dd>
+        </dl>
+        <ol class="instructions less-reduced-margin">
+            <li>Mix liquid ingredients</li>
+            <li>Whisk in vegetables and spices</li>
+            <li>Cover and chill in refrigerator for 12 to 24 hours</li>
+        </ol>
+    </li>
+    <li>
+        <dl>
+            <dt><h3 id="meat_prep">Meat Prep</h4></dt>
+            <dd>Do this at least 6 hours ahead of time</dd>
+        </dl>
+        <ol class="instructions less-reducded-margin">
+            <li>Cut meat into small chunks&mdash;but no smaller than about 1½ inches by 1 inch</li>
+            <li>Put meat in marinade. Make sure its fully submerged, cover/close the container</li>
+            <li>Put the marinating meat in a refrigerator</li>
+        </ol>
+    </li>
+    <li>
+        <dl>
+            <dt><h3 id="broth">Broth Wet Mix</h4></dt>
+            <dd>Do this immediately before starting</dd>
+        </dl>
+        <ol class="instructions less-reduced-margin">
+            <li>Mix Soy Sauce, Dark Soy Sauce, Sesame Oil and Miso in sealable container.</li>
+            <li>Close/seal container and set aside for later use</li>
+        </ol>
+    </li>
+    <li>
+        <dl>
+            <dt><h3 id="the_dish">The Ramen</h4></dt>
+            <dd>This is what you're here for</dd>
+        </dl>
+        <ol class="instructions less-reduced-margin">
+            <li>Remove meat from marinade, dredge in flour/starch and sear in hot pan with a little bit of your choice of cooking oil.</li>
+            <li>Set meat aside and add the sesame oil to the pan along with the vegetables. Mix well and gently sautee, possibly adding a pinch of salt.</li>
+            <li>Add meat, water for the broth and the boillon. Bring to a boil.</li>
+            <li>Add the noodles and broth base mix. Cook until noodles are done.</li>
+            <li>Ramen is ready to serve.
+                <ul class="instruction-notes reduced-margin">
+                    <li>The marinade can be re-used, but experience shows that its effectiveness in adding flavor drops off fast.</li>
+                </ul>
+            </li>
+        </ol>
+    </li>
+</ul>

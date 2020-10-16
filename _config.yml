@@ -1,8 +1,5 @@
-theme: jekyll-theme-hacker
-title: Welcome to Wolfs Cookbook
-description: Food for Geeks, by Geeks
-show_downloads: false
-include: [ recipes ]
-
-github:
-  is_project_page: false
+title: The Wolf's Cookbook
+description: Food By Geeks, For Geeks
+theme: # jekyll-theme-hacker
+simple_title: The Wolf's Cookbook
+include: [ 'recipes/*', 'recipes/*/*' ]

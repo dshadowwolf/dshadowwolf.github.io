@@ -1,0 +1,34 @@
+---
+layout: default
+title: Home
+---
+
+<p>
+Here you can find the recipes that are loved and used regularly by <a href="https://github.com/dshadowwolf">@dshadowwolf</a> and his friends online.
+</p>
+
+<h3>Contents</h3>
+<ol>
+{% for chapter in site.data.chapters %}
+  <li>
+    <dl>
+      <dt>{{chapter.name}}</dt>
+      <dd>{{chapter.description}}</dd>
+    </dl>
+    <ul>
+    {% for recipe in chapter.recipes %}
+      <li>
+          <a href="{{recipe.link}}">{{recipe.name}}</a>
+        {% if recipe.has_notes == "true" %}
+        <ul>
+          {% for note in recipe.notes %}
+            <li>{{ note }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ol>
