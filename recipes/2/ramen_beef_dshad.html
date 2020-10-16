@@ -21,7 +21,7 @@ ingdt: [ { section: Marinade, ingredients: [ { section: Liquids, parts: [ { amou
                 {{ section.section }}
                 <ul class="ing-section-parts" id="{{ts.section}}_{{section.section}}_ingredients">
                     {% for ing in section.parts %}
-                    <li><span class="ing-amount">{{ ing.amount }}</span>{{ ing.name }}
+                    <li><span class="ing-amount">{{ ing.amount }}</span>&nbsp;{{ ing.name }}
                         {% if ing.notes != '' %}
                         <ul class="ing-notes">
                             {% for note in ing.notes %}
