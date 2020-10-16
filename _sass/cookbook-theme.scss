@@ -191,6 +191,16 @@ $container-max-width: 1000px;
 
 }
 
+@keyframes flicker {
+    $steps:20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            opacity:random();
+        }
+    }
+}
+
+/*
 .container::before {
     content: " ";
     display: block;
@@ -203,7 +213,8 @@ $container-max-width: 1000px;
     z-index: 2;
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
-    background-repeat: repeat-y;
+    height: 400px;
+    width: 400px;
 }
 
 
@@ -221,7 +232,8 @@ $container-max-width: 1000px;
     pointer-events: none;
     animation: flicker 0.15s infinite;
     background-repeat: repeat-y;
-}
+    height: 100%;
+} */
 
 body {
     margin: 0;
@@ -240,6 +252,35 @@ body {
     max-width: $container-max-width;
     margin: 0 auto;
     animation: textShadow 1.6s infinite;
+    overflow:hidden;
+    position:relative;
+    
+    &::after {
+        content:" ";
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:transparentize($body-background,0.9);
+        opacity:0;
+        z-index:2;
+        pointer-events:none;
+    }
+    &::before {
+        content:" ";
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background:linear-gradient(transparentize($body-background,1) 50%, transparentize(darken($body-background,10),0.75) 50%), linear-gradient(90deg,transparentize(#ff0000,0.94),transparentize(#00ff00,0.98),transparentize(#0000ff,0.94));
+        z-index:2;
+        background-size:100% 2px, 3px 100%;
+        pointer-events:none;
+    }
 }
 
 section {
