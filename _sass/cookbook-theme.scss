@@ -105,7 +105,7 @@ $container-max-width: 1000px;
 }
 
 @keyframes flicker {
-    $steps:600;
+    $steps:20;
     @for $i from 0 through $steps {
         #{percentage($i*(1/$steps))} {
             opacity:((random(300)%75)+75)/100;
