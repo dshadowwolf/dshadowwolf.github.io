@@ -191,7 +191,7 @@ $container-max-width: 1000px;
 
 }
 
-body::before {
+div.effets-container::before {
     content: " ";
     display: block;
     position: absolute;
@@ -206,7 +206,8 @@ body::before {
     background-repeat: repeat-y;
 }
 
-body::after {
+
+div.effets-container::after {
     content: " ";
     display: block;
     position: absolute;
@@ -220,6 +221,14 @@ body::after {
     pointer-events: none;
     animation: flicker 0.15s infinite;
     background-repeat: repeat-y;
+}
+
+
+div.effets-container {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $system-fonts ;
+    animation: textShadow 1.6s infinite;
 }
 
 body {
