@@ -252,7 +252,7 @@ body {
     max-width: $container-max-width;
     margin: 0 auto;
     animation: textShadow 1.6s infinite;
-    overflow:hidden;
+    z-index: 1;
     position:relative;
     
     &::after {
@@ -328,9 +328,7 @@ header h1 {
     -webkit-font-smoothing: antialiased;
     @include media-max-width($container-max-width) {
         margin-left: 0;
-          
     }
-
 }
 
 
@@ -424,13 +422,13 @@ ul li {
     list-style-type: none;
 }
 
-ul li::marker {
+ul > li::marker {
     content: "\226b\00a0\00a0";
     font-size: 16px;
     color: $conifer;
 }
 
-ol > li > ul li > ul li::marker {
+ol > li > ul li > ul > li::marker {
     content: "\2937\00a0\00a0";
     font-size: 16px;
     color: $conifer;
@@ -603,41 +601,53 @@ a:visited {
 
 ul.instruction-notes li {
     margin-left: 4em;
-    font-size: .95em;
+    font-size: 1.3em;
     font-variant: small-caps;
+    line-height: 0.8em;
+}
+
+ol.instructions, ol.instructions li {
+    list-style: decimal inside !important;
+    margin: 0;
 }
 
 ol.instructions li {
     margin-left: 2em;
-    font-size: 16px;
+    font-size: 1.3em;
+    line-height: 1em;
+    margin-bottom: 0.33em;
 }
 
 li.ing-section::marker, ul.ing-section-parts > li.ing-section::marker {
     content: '\2767\00a0';
     color: $conifer;
-    font-size: 20px;
+    font-size: 1.4em;
 }
 
 ul.ing-section-parts > li::marker {
     content: '\204d\00a0\00a0';
     font-size: 1.4em;
-    line-height: 0.8;
+}
+
+li.ing-section {
+    font-size: 1.3em;
 }
 
 ul.ing-section-parts > li {
-    font-size: 16px;
-    line-height: 0.8;
+    font-size: .95em;
+    line-height: 0.8em;
 }
 
 ul.ing-notes li {
-    font-size: .95em;
+    font-size: 0.95em;
     font-variant: small-caps;
+    line-height: 0.9em !important;
 }
 
 ul.ing-notes li::marker, ul.instruction-notes li::marker {
     content: '\2023\00a0';
-    font-size: 0.95em;
-    line-height: 0.8;
+    font-size: 1.3em;
+    line-height: 0.2em;
 }
 
 footer {
@@ -650,4 +660,68 @@ footer {
     margin: 0px auto;
     align: center;
     text-align: center;
+}
+
+li.ing-section-outer {
+    font-size: 1.3em;
+}
+
+li.ing-section-outer::marker {
+    content: '\21a3\00a0';
+    color: $conifer;
+    font-size: 1.35em;
+}
+
+.ing-section-parts li.ing-section {
+    font-size: .95em !important;
+}
+
+li.ing-section > ul.ing-section-parts > li {
+    font-size: .95em !important;
+}
+
+.ing-notes {
+    font-size: 1.05em !important;
+    margin-left: -1em;
+}
+
+dt {
+    line-height: 0.75;
+    padding: 0;
+    margin: 0;
+}
+
+dd {
+    font-size: 1.3em;
+    line-height: 0.98;
+    &::before {
+        content: '\22d9\00a0';
+        color: $conifer;
+        font-size: 0.6em;
+        vertical-align: 0.25em;
+    }
+    &::after {
+        content: '\00a0\22d8';
+        color: $conifer;
+        font-size: 0.6em;
+        vertical-align: 0.25em;
+    }
+}
+
+dt > h3 {
+    margin: 0;
+    margin-bottom: 0.25em;
+}
+
+.reduced-margin {
+    margin-left: -2.75em !important;
+}
+
+.less-reduced-margin {
+    margin-left: -1em !important;
+}
+ 
+h3.instructions-section, h3.ingredients-section {
+    margin: 0;
+    padding: 0;
 }

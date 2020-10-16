@@ -2,7 +2,7 @@
         <div class="container">
             <section id="main_content">
                 <p id="recipe_description">{{ page.description }}</p>
-                <h3>Ingredients</h3>
+                <h3 class="ingredients-section" name="ingredients">Ingredients</h3>
                 <ul class="ingredients">
                     {% for section in page.ingredients %}
                     <li class="ing-section">{{section.section}}
@@ -22,14 +22,14 @@
                     </li>
                     {% endfor %}
                 </ul>
-                <h3>Instructions</h3>
-                <ol class="instructions">
+                <h3 class="instructions-section" name="instructions">Instructions</h3>
+                <ol class="instructions reduced-margin">
                     {% for instruction in page.instructions %}
                     <li>{{instruction}}</li>
                     {% endfor %}
                 </ol>
                 {% if page.instruction_notes != '' %}
-                <ul class="instruction-notes">
+                <ul class="instruction-notes reduced-margin">
                     {% for note in page.instruction_notes %}
                     <li>{{ note }}</li>
                     {% endfor %}
