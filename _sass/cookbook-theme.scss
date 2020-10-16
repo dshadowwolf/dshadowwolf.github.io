@@ -121,7 +121,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: $system-fonts ;
-    animation: flicker .2s infinite;
+    animation: flicker 0.1s infinite;
 }
 
 /* General & 'Reset' Stuff */
