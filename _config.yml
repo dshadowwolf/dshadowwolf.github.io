@@ -1,5 +1,5 @@
 title: The Wolf's Cookbook
 description: Food By Geeks, For Geeks
-theme: ""
+theme: # jekyll-theme-hacker
 simple_title: The Wolf's Cookbook
 include: [ 'recipes/*', 'recipes/*/*' ]
