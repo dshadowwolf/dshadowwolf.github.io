@@ -11,17 +11,17 @@
 			  crossorigin="anonymous"></script>
 	<script>
 	  $(window).on("load", function() {
-	      $("#container").addClass("containerSpecial");
+	      $("div.container").addClass("containerSpecial");
 	      $('body,html').addClass("doFlicker");
 	      
 	      $("#sfx").change( function() {
 		  if($(this).is(':checked')) {
 		      // turn stuff on
-		      $('#container').addClass("containerSpecial");
+		      $('div.container').addClass("containerSpecial");
 		      $('body,html').addClass("doFlicker");
 		  } else {
 		      // turn stuff off
-		      $('#container').removeClass('containerSpecial');
+		      $('div.container').removeClass('containerSpecial');
 		      $('body,html').removeClass("doFlicker");
 		  }
 	      });
