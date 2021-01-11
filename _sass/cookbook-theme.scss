@@ -125,10 +125,11 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: $system-fonts ;
+    animation: flicker 0.1s infinite;
 }
 
-doFlicker {
-    animation: flicker 0.1s infinite;
+.off {
+    animation-name: none;
 }
 
 /* General & 'Reset' Stuff */
@@ -165,9 +166,6 @@ doFlicker {
         background-size:100% 2px, 3px 100%;
         pointer-events:none;
     }
-}
-
-containerSpecial {
     animation: textShadow 1.6s infinite;
 }
 

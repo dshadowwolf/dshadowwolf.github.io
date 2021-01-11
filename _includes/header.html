@@ -19,17 +19,15 @@
 	  }
 	  
 	  $(window).on("load", function() {
-	      $("div.container").each(function() { addClass(this,"containerSpecial"); })
-	      
 	      $("#sfx").change( function() {
 		  if($(this).is(':checked')) {
 		      // turn stuff on
-		      $("div.container").each(function() { addClass(this,"containerSpecial"); })
-		      $('body,html').addClass("doFlicker");
+		      $("div.container").each(function() { removeClass(this,"off"); })
+		      $('body,html').removeClass("off");
 		  } else {
 		      // turn stuff off
-		      $("div.container").each(function() { removeClass(this,"containerSpecial"); })
-		      $('body,html').removeClass("doFlicker");
+		      $("div.container").each(function() { addClass(this,"off"); })
+		      $('body,html').addClass("off");
 		  }
 	      });
 	  });
