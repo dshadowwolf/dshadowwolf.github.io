@@ -125,6 +125,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family: $system-fonts ;
+}
+doFlicker {
     animation: flicker 0.1s infinite;
 }
 

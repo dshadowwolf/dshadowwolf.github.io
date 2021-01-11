@@ -12,14 +12,17 @@
 	<script>
 	  $(window).on("load", function() {
 	      $("#container").addClass("containerSpecial");
+	      $(body).addClass("doFlicker");
 	      
 	      $("#sfx").change( function() {
 		  if($(this).is(':checked')) {
 		      // turn stuff on
 		      $('#container').addClass("containerSpecial");
+		      $(body).addClass("doFlicker");
 		  } else {
 		      // turn stuff off
 		      $('#container').removeClass('containerSpecial');
+		      $(body).removeClass("doFlicker");
 		  }
 	      });
 	  }
@@ -36,7 +39,7 @@
     <body>
       <header>
 	<div class="controls"><input type="checkbox" id="sfx" name="sfx" value="ON" checked/><label for="sfx">Enable Page Special FX</label></div>
-            <div class="container">
+            <div class="container" id="container">
                 <a id="a-title" href="{{ '/' | relative_url }}">
                     <h1>{{ site.title | default: "You Need A Title" }}</h1>
                 </a>
