@@ -126,6 +126,7 @@ body {
     line-height: 1.5;
     font-family: $system-fonts ;
 }
+
 doFlicker {
     animation: flicker 0.1s infinite;
 }
@@ -136,12 +137,8 @@ doFlicker {
     width: 90%;
     max-width: $container-max-width;
     margin: 0 auto;
-    animation: textShadow 1.6s infinite;
     z-index: 1;
     position:relative;
-}
-
-containerSpecial {
     &::after {
         content:" ";
         display:block;
@@ -168,6 +165,10 @@ containerSpecial {
         background-size:100% 2px, 3px 100%;
         pointer-events:none;
     }
+}
+
+containerSpecial {
+    animation: textShadow 1.6s infinite;
 }
 
 section {
