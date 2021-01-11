@@ -12,17 +12,17 @@
 	<script>
 	  $(window).on("load", function() {
 	      $("#container").addClass("containerSpecial");
-	      $('body').addClass("doFlicker");
+	      $('body,html').addClass("doFlicker");
 	      
 	      $("#sfx").change( function() {
 		  if($(this).is(':checked')) {
 		      // turn stuff on
 		      $('#container').addClass("containerSpecial");
-		      $('body').addClass("doFlicker");
+		      $('body,html').addClass("doFlicker");
 		  } else {
 		      // turn stuff off
 		      $('#container').removeClass('containerSpecial');
-		      $('body').removeClass("doFlicker");
+		      $('body,html').removeClass("doFlicker");
 		  }
 	      });
 	  });
