@@ -37,5 +37,18 @@
         "has_notes": "true",
 	"notes": [ "<em>Requires</em>: Waffle Iron" ],
 	"link": "recipes/3/waffles_dshad.html" } ]
-  }	
+  },
+    {
+	"name": "Contributed Recipes",
+	"description": "Recipes contributed by friends of @DShadowWolf or users of the site",
+	"recipes": [
+	    {
+		"name": "Dutch Baby",
+		"has_notes": "true",
+		"notes": [ "The Pancake of Doom" ],
+		"link": "recipes/4/dutch_baby_cubist.html"
+	    }
+	}
+    }
+		
 ]
