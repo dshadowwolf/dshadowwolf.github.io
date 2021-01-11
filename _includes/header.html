@@ -5,6 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+	<script
+			  src="https://code.jquery.com/jquery-3.5.1.min.js"
+			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			  crossorigin="anonymous"></script>
+	<script>
+	  $(window).on("load", function() {
+	      $("#container").addClass("containerSpecial");
+	      
+	      $("#sfx").change( function() {
+		  if($(this).is(':checked')) {
+		      // turn stuff on
+		      $('#container').addClass("containerSpecial");
+		  } else {
+		      // turn stuff off
+		      $('#container').removeClass('containerSpecial');
+		  }
+	      });
+	  }
+	</script>
         <title>
             {% if page.title != '' %}
             {{ site.simple_title }} - {{ page.title }}
@@ -15,12 +34,12 @@
     </head>
 
     <body>
-        <header>
+      <header>
+	<div class="controls"><input type="checkbox" id="sfx" name="sfx" value="ON" checked/><label for="sfx">Enable Page Special FX</label></div>
             <div class="container">
                 <a id="a-title" href="{{ '/' | relative_url }}">
                     <h1>{{ site.title | default: "You Need A Title" }}</h1>
                 </a>
                 <h2>{{ site.description | default: "And A Tagline" }}</h2>
-
             </div>
         </header>

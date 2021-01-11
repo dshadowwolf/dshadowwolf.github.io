@@ -16,6 +16,10 @@ $container-max-width: 1000px;
 
 }
 
+div.controls {
+    float: right;
+}
+
 @keyframes textShadow {
     0% {
         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
@@ -133,7 +137,9 @@ body {
     animation: textShadow 1.6s infinite;
     z-index: 1;
     position:relative;
-    
+}
+
+containerSpecial {
     &::after {
         content:" ";
         display:block;
