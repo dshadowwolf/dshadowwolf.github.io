@@ -16,8 +16,10 @@ $container-max-width: 1000px;
 
 }
 
-div.controls {
-    float: right;
+input#sfx {
+    border: 0px;
+    border-bottom: 1px solid $gallery;
+    background: $cod-grey;
 }
 
 @keyframes textShadow {
