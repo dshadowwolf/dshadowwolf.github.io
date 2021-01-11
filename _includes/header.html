@@ -10,18 +10,25 @@
 			  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 			  crossorigin="anonymous"></script>
 	<script>
+	  function addClass(el, classname) {
+	      $(el).addClass(classname);
+	  }
+
+	  function removeClass(el, classname) {
+	      $(el).removeClass(classname);
+	  }
+	  
 	  $(window).on("load", function() {
-	      $("div.container").addClass("containerSpecial");
-	      $('body,html').addClass("doFlicker");
+	      $("div.container").each(function() { addClass(this,"containerSpecial"); })
 	      
 	      $("#sfx").change( function() {
 		  if($(this).is(':checked')) {
 		      // turn stuff on
-		      $('div.container').addClass("containerSpecial");
+		      $("div.container").each(function() { addClass(this,"containerSpecial"); })
 		      $('body,html').addClass("doFlicker");
 		  } else {
 		      // turn stuff off
-		      $('div.container').removeClass('containerSpecial');
+		      $("div.container").each(function() { removeClass(this,"containerSpecial"); })
 		      $('body,html').removeClass("doFlicker");
 		  }
 	      });
@@ -36,7 +43,7 @@
         </title>
     </head>
 
-    <body>
+    <body class="doFlicker">
       <header>
 	<div class="controls"><input type="checkbox" id="sfx" name="sfx" value="ON" checked/><label for="sfx">Enable Page Special FX</label></div>
             <div class="container" id="container">
