@@ -21,7 +21,7 @@ equip: [ "A paella pan—any round, shallow, wide pan with a flat bottom and slo
 <h3 id="ingredients">Ingredients</h3>
 <ul class="ingredients">
   {% for ing in page.igdt %}
-  <li>{{ ing }}</li>
+  <li>
     <span class="ing-amount">{{ ing.amount }}</span>&nbsp;{{ ing.name }}
     {% if ing.notes != '' %}
     <ul class="ing-notes">
