@@ -335,12 +335,12 @@ h3#instructions {
 }
 
 ol.instructions {
-    max-width: 350px;
     counter-reset: my-awesome-counterinst;
     list-style: none;
     padding-left: 40px;
     line-height: 1.4;
     top: -1em;
+    font-size: 12px;
 }
 
 ol.instructions li {
@@ -362,7 +362,7 @@ ol.instructions li::before {
     width: var(--size);
     height: var(--size);
     background: black;
-    text-align: center;
+    text-align: right;
 }
 
 blockquote {
