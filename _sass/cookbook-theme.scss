@@ -322,6 +322,53 @@ ol > li > ul li > ul > li::marker {
     color: $conifer;
 }
 
+
+ul.equipment > li::marker {
+    content: "\1f846\00a0\00a0";
+    font-size: 18px;
+    color: $conifer;
+}
+
+ol.instructions {
+  clear: both;
+  list-style: none;
+  padding-left: 2%;
+}
+ol.instructions li {
+  margin: 2em 0;
+  padding-top: 1em;
+  display: block;
+  position: relative;
+  counter-increment: inst;
+}
+ol.instructions li::before {
+  content: counter(inst);
+  
+  background: $conifer;
+  color: black;
+  
+  font-size: 1em;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 1px 1px $gulf-stream;
+  
+  border-radius: 0 0.675em 0.675em 0;
+  font-size: 1.5em;
+  text-align: center;
+  
+  padding-top: 0;
+  padding-left: 2.25%;
+  left: -5%;
+  top: -0.65em;
+  height: 1.35em;
+  width: 1.35em;
+  position: absolute;
+  
+  transition: all 0.2s ease-in-out;
+  
+  z-index: -1;
+}
+
 blockquote {
     color: $blockquote-color;
     padding-left: 10px;
