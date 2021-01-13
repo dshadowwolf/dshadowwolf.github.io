@@ -311,6 +311,10 @@ ul li {
     margin: 0 0 0.5rem 0 !important;
 }
 
+#main_content ul {
+    margin: 0;
+}
+
 ul > li::marker {
     content: "\226b\00a0\00a0";
     font-size: 12px;
