@@ -335,6 +335,7 @@ ol.instructions {
     list-style: none;
     padding-left: 40px;
     line-height: 1.4;
+    top: -1em;
 }
 
 ol.instructions li {
@@ -356,7 +357,6 @@ ol.instructions li::before {
     line-height: var(--size);
     width: var(--size);
     height: var(--size);
-    top: 0;
     transform: rotate(-10deg);
     background: black;
     border-radius: 25%;
