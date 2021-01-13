@@ -305,9 +305,10 @@ dt {
     font-weight: bold;
 
 }
-
+    
 ul li {
     list-style-type: none;
+    margin: 0 0 0.5rem 0 !important;
 }
 
 ul > li::marker {
@@ -349,7 +350,7 @@ ul.variations > li::marker {
 }
     
 ol.instructions {
-    counter-reset: my-awesome-counterinst;
+    counter-reset: inst;
     list-style: none;
     padding-left: 40px;
     line-height: 1.4;
