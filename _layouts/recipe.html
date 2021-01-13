@@ -23,13 +23,13 @@
                     {% endfor %}
                 </ul>
                 <h3 class="instructions-section" name="instructions">Instructions</h3>
-                <ol class="instructions reduced-margin">
+                <ol class="instructions">
                     {% for instruction in page.instructions %}
                     <li>{{instruction}}</li>
                     {% endfor %}
                 </ol>
                 {% if page.instruction_notes != '' %}
-                <ul class="instruction-notes reduced-margin">
+                <ul class="instruction-notes">
                     {% for note in page.instruction_notes %}
                     <li>{{ note }}</li>
                     {% endfor %}
