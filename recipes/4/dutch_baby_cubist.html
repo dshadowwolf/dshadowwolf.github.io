@@ -23,13 +23,7 @@ equip: [ "A paella pan—any round, shallow, wide pan with a flat bottom and slo
   {% for ing in page.igdt %}
   <li>
     <span class="ing-amount">{{ ing.amount }}</span>&nbsp;{{ ing.name }}
-    {% if ing.notes != '' %}
-    <ul class="ing-notes">
-      {% for note in ing.notes %}
-      <li>{{ note }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+    {% if ing.notes != '' %}<span class="simple-note">(&nbsp;ing.notes&nbsp;)</span>{% endif %}
   </li>
   {% endfor %}
 </ul>

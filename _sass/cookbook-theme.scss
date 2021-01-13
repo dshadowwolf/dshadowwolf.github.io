@@ -352,9 +352,8 @@ ol.instructions li {
 }
 
 ol.instructions li::before {
-    content: counter(inst) ".\00a0\00a0";
+    content: counter(inst) ".\00a0\00a0\00a0\00a0";
     color: $conifer;
-    font-size: 1.5rem;
     font-weight: bold;
     position: absolute;
     --size: 16px;
@@ -362,11 +361,8 @@ ol.instructions li::before {
     line-height: var(--size);
     width: var(--size);
     height: var(--size);
-    //transform: rotate(-10deg);
     background: black;
-    //border-radius: 25%;
     text-align: center;
-    //box-shadow: 1px 1px 0 #999;
 }
 
 blockquote {
